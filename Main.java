@@ -22,6 +22,18 @@ class Cliente extends Persona {
     }
 }
 
+class Trabajador extends Persona{
+    double Salario;
+
+    public Trabajador (int Edad, String Nombre, String Telefono, double Salario){
+        super (Edad, Nombre, Telefono);
+        this.Salario = Salario;
+    }
+    public double getSalario(){
+        return Salario;
+    }
+}
+
 public class Main {
     public static void main(String[] args) {
         Cliente cliente = new Cliente (19, "Sunflower", "5567811234", 2000.0);
@@ -30,5 +42,12 @@ public class Main {
         System.out.println("Nombre: " + cliente.Nombre);
         System.out.println("Telefono: " + cliente.Telefono);
         System.out.println("Credito: " + cliente.getCredito());
+
+        Trabajador trabajador = new Trabajador(20, "Stephenie", "5567123456", 5000.0);
+
+        System.out.println("Edad: " + trabajador.Edad);
+        System.out.println("Nombre: " + trabajador.Nombre);
+        System.out.println("Telefono: " + trabajador.Telefono);
+        System.out.println("Salario: " + trabajador.getSalario());
     }
 }
